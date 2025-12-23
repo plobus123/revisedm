@@ -8,113 +8,99 @@ function initIcons() {
 document.addEventListener('DOMContentLoaded', () => {
     initIcons();
     setTimeout(initIcons, 500);
+});
 
-    // --- DESKTOP DROPDOWN LOGIC (FIXED) ---
-    const desktopServicesBtn = document.getElementById('desktop-services-btn');
-    const desktopServicesMenu = document.getElementById('desktop-services-menu');
-    const dropdownIcon = document.getElementById('dropdown-icon');
+// --- MOBILE MENU ---
+const mobileToggle = document.getElementById('mobile-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeMobileMenu = document.getElementById('close-mobile-menu');
 
-    if (desktopServicesBtn && desktopServicesMenu) {
-        // Toggle on click
-        desktopServicesBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            desktopServicesMenu.classList.toggle('show'); // Toggles the flex display
-            
-            // Rotate Icon
-            if (desktopServicesMenu.classList.contains('show')) {
-                if(dropdownIcon) dropdownIcon.style.transform = 'rotate(180deg)';
-            } else {
-                if(dropdownIcon) dropdownIcon.style.transform = 'rotate(0deg)';
-            }
-        });
-
-        // Close when clicking anywhere else
-        document.addEventListener('click', (e) => {
-            if (!desktopServicesBtn.contains(e.target) && !desktopServicesMenu.contains(e.target)) {
-                desktopServicesMenu.classList.remove('show');
-                if(dropdownIcon) dropdownIcon.style.transform = 'rotate(0deg)';
-            }
-        });
-    }
-
-    // --- MOBILE MENU ---
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeMobileMenu = document.getElementById('close-mobile-menu');
-
-    function toggleMenu() {
-        if (mobileMenu) {
-            if (mobileMenu.classList.contains('translate-x-full')) {
-                mobileMenu.classList.remove('translate-x-full');
-                mobileMenu.classList.add('translate-x-0');
-            } else {
-                mobileMenu.classList.add('translate-x-full');
-                mobileMenu.classList.remove('translate-x-0');
-            }
+function toggleMenu() {
+    if (mobileMenu) {
+        if (mobileMenu.classList.contains('translate-x-full')) {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+        } else {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
         }
     }
+}
 
-    if (mobileToggle) mobileToggle.addEventListener('click', toggleMenu);
-    if (closeMobileMenu) closeMobileMenu.addEventListener('click', toggleMenu);
+if (mobileToggle) mobileToggle.addEventListener('click', toggleMenu);
+if (closeMobileMenu) closeMobileMenu.addEventListener('click', toggleMenu);
 
-    // Mobile Dropdown Accordion
-    const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-    mobileDropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', (e) => {
-            const content = e.currentTarget.nextElementSibling;
-            content.classList.toggle('hidden');
-        });
-    });
-
-    // --- CAROUSEL LOGIC ---
-    window.scrollCarousel = function(carouselId, direction) {
-        const track = document.getElementById(carouselId);
-        if (track) {
-            const scrollAmount = track.offsetWidth; 
-            if (direction === 1) {
-                track.scrollLeft += scrollAmount;
-            } else {
-                track.scrollLeft -= scrollAmount;
-            }
-        }
-    }
-
-    // --- LIGHTBOX ---
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeLightbox = document.getElementById('close-lightbox');
-
-    window.openLightbox = function(src) {
-        if (lightbox && lightboxImg) {
-            lightboxImg.src = src;
-            lightbox.classList.remove('hidden');
-            document.body.classList.add('no-scroll');
-        }
-    }
-
-    function hideLightbox() {
-        if (lightbox) {
-            lightbox.classList.add('hidden');
-            lightboxImg.src = '';
-            document.body.classList.remove('no-scroll');
-        }
-    }
-
-    if (closeLightbox) closeLightbox.addEventListener('click', hideLightbox);
-    if (lightbox) {
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) hideLightbox();
-        });
-    }
-
-    // --- FORM SUBMISSION ---
-    const contactForms = document.querySelectorAll('.contact-form');
-    contactForms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your inquiry. A Martin Construction representative will contact you shortly.');
-            form.reset();
-        });
+// Mobile Dropdown
+const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+mobileDropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        const content = e.currentTarget.nextElementSibling;
+        content.classList.toggle('hidden');
     });
 });
+
+// --- DESKTOP DROPDOWN ---
+const desktopServicesBtn = document.getElementById('desktop-services-btn');
+const desktopServicesMenu = document.getElementById('desktop-services-menu');
+const dropdownIcon = document.getElementById('dropdown-icon');
+
+if (desktopServicesBtn && desktopServicesMenu) {
+    desktopServicesBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        desktopServicesMenu.classList.toggle('hidden');
+        if(!desktopServicesMenu.classList.contains('hidden')) {
+             if(dropdownIcon) dropdownIcon.style.transform = 'rotate(180deg)';
+        } else {
+             if(dropdownIcon) dropdownIcon.style.transform = 'rotate(0deg)';
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!desktopServicesBtn.contains(e.target) && !desktopServicesMenu.contains(e.target)) {
+             desktopServicesMenu.classList.add('hidden');
+             if(dropdownIcon) dropdownIcon.style.transform = 'rotate(0deg)';
+        }
+    });
+}
+
+// --- CAROUSEL LOGIC ---
+window.scrollCarousel = function(carouselId, direction) {
+    const track = document.getElementById(carouselId);
+    if (track) {
+        const scrollAmount = track.offsetWidth; 
+        if (direction === 1) {
+            track.scrollLeft += scrollAmount;
+        } else {
+            track.scrollLeft -= scrollAmount;
+        }
+    }
+}
+
+// --- LIGHTBOX ---
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeLightbox = document.getElementById('close-lightbox');
+
+window.openLightbox = function(src) {
+    if (lightbox && lightboxImg) {
+        lightboxImg.src = src;
+        lightbox.classList.remove('hidden');
+        document.body.classList.add('no-scroll');
+    }
+}
+
+function hideLightbox() {
+    if (lightbox) {
+        lightbox.classList.add('hidden');
+        lightboxImg.src = '';
+        document.body.classList.remove('no-scroll');
+    }
+}
+
+if (closeLightbox) closeLightbox.addEventListener('click', hideLightbox);
+if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) hideLightbox();
+    });
+}
