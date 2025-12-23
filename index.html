@@ -6,6 +6,8 @@
     <title>Martin Construction | General Contractor Denver & Englewood, CO</title>
     <meta name="description" content="Premier Class B Licensed General Contractors in Denver & Englewood, CO. Specializing in luxury remodeling, insurance restoration, structural repairs, and commercial construction." />
     
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -163,10 +165,14 @@
                                 <input type="hidden" name="access_key" value="3e696060-6ade-46dd-93a1-590db5823748">
                                 <input type="hidden" name="subject" value="New 10% Offer Inquiry (Hero Form)">
                                 <input type="hidden" name="redirect" value="https://martinconstructors.org/contact.html">
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                                 <div>
                                     <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white text-stone-900 p-4 text-base focus:outline-none border-2 border-transparent focus:border-bronze-500 placeholder-stone-400">
                                 </div>
+                                
+                                <div class="h-captcha" data-captcha="true"></div>
+
                                 <button type="submit" class="w-full bg-bronze-600 text-white py-4 px-6 uppercase tracking-widest text-sm font-bold hover:bg-white hover:text-stone-900 transition-colors cursor-pointer border border-bronze-600">Claim 10% Offer*</button>
                                 <p class="text-xs text-stone-500 mt-3 text-center leading-snug">For a limited time, new clients can receive a 10% discount on any project over $10,000, please inquire for more details. Terms & Conditions apply</p>
                             </form>
@@ -442,6 +448,7 @@
                         <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 contact-form">
                             <input type="hidden" name="access_key" value="3e696060-6ade-46dd-93a1-590db5823748">
                             <input type="hidden" name="subject" value="New Contact Form Inquiry">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
@@ -470,6 +477,9 @@
                                 <label class="text-sm font-bold uppercase tracking-widest text-stone-500">Message</label>
                                 <textarea name="message" rows="4" class="w-full border-2 border-stone-900 bg-white text-stone-900 p-4 text-base focus:outline-none focus:border-bronze-600"></textarea>
                             </div>
+                            
+                            <div class="h-captcha" data-captcha="true"></div>
+
                             <button type="submit" class="w-full bg-stone-900 text-white py-5 uppercase tracking-widest text-sm font-bold hover:bg-bronze-600 transition-colors cursor-pointer">Submit Inquiry</button>
                         </form>
                     </div>
