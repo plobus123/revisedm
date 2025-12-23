@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structural Repairs | Martin Construction</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
+            colors: { stone: { 850: '#1c1917', 950: '#0c0a09' }, bronze: { 500: '#a18058', 600: '#8c6b46' } },
+            animation: { 'fade-in-up': 'fadeInUp 0.8s ease-out forwards' }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-stone-50 text-stone-900 antialiased selection:bg-bronze-500 selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 flex flex-col transition-all duration-300 shadow-md bg-white text-stone-900">
+        <div id="navbar" class="w-full transition-all duration-300 py-4 lg:py-5">
+            <div class="container mx-auto px-4 lg:px-12 flex items-center justify-between">
+                <a href="index.html" class="group relative z-50 flex-shrink-0">
+                    <div class="flex flex-col items-start leading-none">
+                        <span id="logo-text" class="font-serif text-3xl lg:text-4xl font-bold tracking-tight text-stone-900">MARTIN</span>
+                        <span id="logo-subtext" class="text-[10px] lg:text-xs tracking-[0.3em] uppercase font-sans font-medium mt-1 text-bronze-600">Construction</span>
+                    </div>
+                </a>
+                <nav class="hidden xl:flex items-center gap-8 h-full">
+                    <a href="index.html" class="nav-link text-sm uppercase tracking-widest font-bold relative group py-2 text-stone-950 hover:text-bronze-600">Home</a>
+                    <a href="about.html" class="nav-link text-sm uppercase tracking-widest font-bold relative group py-2 text-stone-950 hover:text-bronze-600">About Us</a>
+                    <div class="relative h-full flex items-center">
+                        <button id="desktop-services-btn" class="nav-link text-sm uppercase tracking-widest font-bold relative py-2 text-stone-950 hover:text-bronze-600 flex items-center gap-1 focus:outline-none bg-transparent border-none cursor-pointer">
+                            Services <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="dropdown-icon" class="transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <div id="desktop
