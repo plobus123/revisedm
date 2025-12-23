@@ -1,4 +1,6 @@
-/* Reset basic spacing */
+/* =========================================
+   1. RESET & BASIC STYLES
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +10,18 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* --- HEADER STYLES --- */
+/* =========================================
+   2. HEADER & NAVIGATION
+   ========================================= */
 header {
-    background-color: #333; 
+    background-color: #333; /* Dark Grey Background */
     width: 100%;
     position: relative;
-    z-index: 1000; /* Ensures header stays on top of other content */
+    z-index: 1000; /* Ensures header stays on top of content */
 }
 
 .navbar {
@@ -43,7 +49,7 @@ header {
 }
 
 .nav-links li {
-    position: relative; 
+    position: relative; /* Anchor point for the dropdown */
     margin-left: 20px;
 }
 
@@ -53,53 +59,65 @@ header {
     color: white;
     padding: 10px 15px;
     display: block;
-    transition: color 0.3s; /* Smooth color change */
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #f4a261; /* Orange/Gold accent on hover */
+    color: #f4a261; /* Orange/Gold accent */
 }
 
-/* --- SMOOTH DROPDOWN LOGIC --- */
+/* =========================================
+   3. SMOOTH DROPDOWN MENU
+   ========================================= */
 
-/* The box that holds the links */
+/* The invisible container for the menu */
 .dropdown-content {
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
-    background-color: #444;
     min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1000;
-    
-    /* ANIMATION SETTINGS START */
-    opacity: 0;               /* Completely invisible */
-    visibility: hidden;       /* hidden from mouse clicks */
-    transform: translateY(10px); /* Start 10px lower */
-    transition: all 0.3s ease;   /* The smooth transition time */
-    /* ANIMATION SETTINGS END */
+    z-index: 9999;
+    padding-top: 10px; /* Invisible bridge so mouse doesn't lose focus */
 }
 
-/* The links inside the dropdown */
+/* The actual colored box inside the container (Requires .inner-menu in HTML) */
+.dropdown-content .inner-menu {
+    background-color: #444;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    overflow: hidden;
+
+    /* Animation States */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); /* Start slightly down */
+    transition: all 0.3s ease;   /* Smooth fade/slide */
+}
+
+/* Dropdown Links */
 .dropdown-content a {
     padding: 12px 16px;
     border-bottom: 1px solid #555;
     color: white;
     display: block;
+    text-decoration: none;
 }
 
 .dropdown-content a:hover {
     background-color: #555;
+    color: #f4a261;
 }
 
-/* THE MAGIC: Fade in and slide up when you hover */
-.dropdown:hover .dropdown-content {
-    opacity: 1;               /* Fully visible */
-    visibility: visible;      /* Clickable */
-    transform: translateY(0); /* Slide up to original position */
+/* The Trigger: Show menu on hover */
+.dropdown:hover .dropdown-content .inner-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Slide up to position */
 }
 
-/* --- HERO SECTION --- */
+/* =========================================
+   4. HERO SECTION (Placeholder)
+   ========================================= */
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -108,4 +126,71 @@ header {
 .hero h1 {
     font-size: 3rem;
     color: #333;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   5. FOOTER STYLES
+   ========================================= */
+.site-footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 50px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Stacks columns on small screens */
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-col h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 2px solid #f4a261;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-col p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #f4a261;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 14px;
 }
