@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Construction | Martin Construction</title>
+    <title>Martin Construction | General Contractor Denver</title>
+    <meta name="description" content="Premier Class B Licensed General Contractors in Denver & Englewood, CO." />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -13,12 +14,13 @@
           extend: {
             fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
             colors: { stone: { 850: '#1c1917', 950: '#0c0a09' }, bronze: { 500: '#a18058', 600: '#8c6b46' } },
+            animation: { 'fade-in-up': 'fadeInUp 0.8s ease-out forwards' }
           }
         }
       }
     </script>
 </head>
-<body class="bg-stone-50 text-stone-900 antialiased">
+<body class="bg-stone-50 text-stone-900 antialiased selection:bg-bronze-500 selection:text-white">
 
     <header class="fixed top-0 left-0 right-0 z-50 flex flex-col transition-all duration-300 shadow-md bg-white text-stone-900">
         <div id="navbar" class="w-full transition-all duration-300 py-4 lg:py-5">
@@ -29,9 +31,11 @@
                         <span class="text-[10px] lg:text-xs tracking-[0.3em] uppercase font-sans font-medium mt-1 text-bronze-600">Construction</span>
                     </div>
                 </a>
+
                 <nav class="hidden xl:flex items-center gap-8 h-full">
                     <a href="index.html" class="text-sm uppercase tracking-widest font-bold py-2 text-stone-950 hover:text-bronze-600">Home</a>
                     <a href="about.html" class="text-sm uppercase tracking-widest font-bold py-2 text-stone-950 hover:text-bronze-600">About Us</a>
+                    
                     <div class="relative h-full flex items-center group/dropdown">
                         <button class="text-sm uppercase tracking-widest font-bold py-2 text-stone-950 hover:text-bronze-600 flex items-center gap-1 bg-transparent border-none cursor-pointer">
                             Services <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
@@ -46,74 +50,71 @@
                             <a href="service-commercial.html" class="block px-6 py-3 hover:bg-stone-50 text-stone-800 text-sm font-medium">Commercial Contracting</a>
                         </div>
                     </div>
+
                     <a href="portfolio.html" class="text-sm uppercase tracking-widest font-bold py-2 text-stone-950 hover:text-bronze-600">Portfolio</a>
+                    <a href="blog.html" class="text-sm uppercase tracking-widest font-bold py-2 text-stone-950 hover:text-bronze-600">Blog</a>
                     <a href="contact.html" class="text-sm uppercase tracking-widest font-bold py-2 text-stone-950 hover:text-bronze-600">Contact</a>
                 </nav>
-                 <div class="hidden xl:flex items-center gap-6">
+
+                <div class="hidden xl:flex items-center gap-6">
                     <a href="tel:7205840716" class="font-serif text-2xl font-bold text-stone-900 hover:text-bronze-600">720-584-0716</a>
                     <a href="contact.html" class="px-6 py-3 bg-bronze-600 text-white text-sm uppercase tracking-widest font-bold hover:bg-stone-900 transition-colors rounded-sm shadow-md">Book Now</a>
                 </div>
-                 <div class="xl:hidden flex items-center gap-4">
+                
+                <div class="xl:hidden flex items-center gap-4">
                     <button id="mobile-toggle" class="p-2"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
                 </div>
             </div>
         </div>
+        
         <div id="mobile-menu" class="fixed inset-0 bg-stone-50 z-40 hidden flex-col items-center justify-center overflow-y-auto">
             <button id="close-mobile-menu" class="absolute top-6 right-6 p-2"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
             <nav class="flex flex-col items-center gap-6 text-center w-full px-6 py-10">
                 <a href="index.html" class="font-serif text-3xl text-stone-900">Home</a>
                 <a href="about.html" class="font-serif text-3xl text-stone-900">About Us</a>
+                <div class="w-full max-w-xs flex flex-col gap-3 bg-stone-100 p-4 rounded-lg">
+                    <span class="text-sm font-bold uppercase text-bronze-600 mb-2">Services</span>
+                    <a href="service-new.html" class="text-stone-600">New Construction</a>
+                    <a href="service-basement.html" class="text-stone-600">Basement</a>
+                    <a href="service-insurance.html" class="text-stone-600">Insurance Restoration</a>
+                    <a href="service-kitchen.html" class="text-stone-600">Kitchen</a>
+                    <a href="service-bath.html" class="text-stone-600">Bathroom</a>
+                    <a href="service-structural.html" class="text-stone-600">Structural</a>
+                    <a href="service-commercial.html" class="text-stone-600">Commercial</a>
+                </div>
+                <a href="portfolio.html" class="font-serif text-3xl text-stone-900">Portfolio</a>
+                <a href="blog.html" class="font-serif text-3xl text-stone-900">Blog</a>
                 <a href="contact.html" class="mt-4 px-10 py-4 bg-stone-900 text-white uppercase tracking-widest">Book Appointment</a>
             </nav>
         </div>
     </header>
 
     <main class="pt-28 lg:pt-36">
-        <div class="page-view pb-20">
-             <section class="relative h-[60vh] min-h-[500px] mb-20 mt-16">
-                 <img src="https://images.unsplash.com/photo-1600596542815-3ad19fb2a258?auto=format&fit=crop&w=2070&q=80" class="absolute inset-0 w-full h-full object-cover">
-                 <div class="absolute inset-0 bg-black/60 flex items-center justify-center relative z-10">
-                     <div class="text-center text-white p-6">
-                         <span class="text-bronze-500 text-sm font-bold uppercase tracking-widest mb-4 block">Services</span>
-                         <h1 class="font-serif text-5xl md:text-7xl">New Construction</h1>
-                     </div>
-                 </div>
-            </section>
-            <div class="container mx-auto px-6 lg:px-12">
-                <div class="flex flex-col lg:flex-row gap-16">
-                    <div class="lg:w-1/2">
-                        <h2 class="font-serif text-4xl mb-6">Building Your Legacy</h2>
-                        <p class="text-stone-600 mb-6 leading-relaxed text-lg">
-                            From custom homes to detached garages and additions, we bring your blueprints to life. Our "Class B" license allows us to handle complex ground-up construction projects across Denver and Englewood.
-                        </p>
-                        <p class="text-stone-600 mb-6 leading-relaxed text-lg">
-                            We ensure that from the first shovel in the ground to the final coat of paint, every detail is executed to the highest standard.
-                        </p>
-                        <a href="contact.html" class="inline-block bg-stone-900 text-white px-8 py-4 uppercase tracking-widest text-xs font-bold hover:bg-bronze-600 transition-colors">Start Building</a>
-                    </div>
-                    <div class="lg:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" class="w-full h-auto shadow-lg">
+        <section class="relative w-full h-auto min-h-[85vh] flex items-center justify-center overflow-hidden mt-0 py-20 lg:py-16">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1623164324225-8356c36195e5?auto=format&fit=crop&w=1200&q=80" alt="Denver Skyline" class="w-full h-full object-cover opacity-100 animate-[fadeIn_2s_ease-out]">
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+            <div class="relative z-10 container mx-auto px-6 lg:px-12 w-full">
+                <div class="flex flex-col gap-12 text-left text-white max-w-6xl mx-auto">
+                    <div>
+                        <h2 class="text-sm md:text-base font-sans uppercase tracking-[0.3em] mb-4 text-stone-300 animate-fade-in-up">Refined General Contracting</h2>
+                        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-4 leading-tight animate-fade-in-up" style="animation-delay: 0.2s">Property Specialist, <br /><span class="italic text-bronze-500">in Denver Colorado</span></h1>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <footer class="bg-stone-950 text-white py-16 border-t border-stone-900">
-        <div class="container mx-auto px-6 lg:px-12 text-center">
-            <span class="font-serif text-2xl font-bold tracking-tight">MARTIN</span>
-            <p class="text-stone-500 text-sm mt-2">© 2024 Martin Construction.</p>
-        </div>
-    </footer>
-
-    <script>
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const closeMobileMenu = document.getElementById('close-mobile-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileToggle) {
-            mobileToggle.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); mobileMenu.classList.add('flex'); });
-            closeMobileMenu.addEventListener('click', () => { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); });
-        }
-    </script>
-</body>
-</html>
+        </section>
+        
+        <section class="py-24 bg-stone-50 text-stone-900">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="text-center mb-16">
+                     <span class="text-sm font-bold uppercase tracking-widest text-bronze-600">Our Expertise</span>
+                     <h2 class="font-serif text-4xl mt-4">Services</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <a href="service-new.html" class="group relative h-[28rem] overflow-hidden cursor-pointer rounded-sm shadow-md md:col-span-2 lg:col-span-2">
+                        <img src="https://images.unsplash.com/photo-1600596542815-3ad19fb2a258?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-10 text-white">
+                            <h3 class="font-serif text-4xl mb-3 leading-tight">General Remodeling &<br/>New&nbsp;Construction</h3>
+                        </div>
