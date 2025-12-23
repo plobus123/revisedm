@@ -1,141 +1,111 @@
-/* Global smooth scrolling */
-html {
-    scroll-behavior: smooth;
+/* Reset basic spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Custom scrollbar styling */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #f5f5f4;
-}
-::-webkit-scrollbar-thumb {
-    background: #a8a29e;
-    border-radius: 0;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #78716c;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
-.no-scroll {
-    overflow: hidden;
-}
-
-/* Prevent horizontal overflow on mobile */
-body, html {
-    overflow-x: hidden;
+/* --- HEADER STYLES --- */
+header {
+    background-color: #333; 
     width: 100%;
-    font-size: 16px;
+    position: relative;
+    z-index: 1000; /* Ensures header stays on top of other content */
 }
 
-/* Header Styles */
-#navbar {
-    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* DROPDOWN LOGIC */
-.dropdown-content {
-    z-index: 1000;
-}
-
-/* Fix for hoverable dropdown */
-.group:hover .group-hover\:flex {
+.navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.dropdown-item {
-    padding: 16px 24px;
+/* Logo Style */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
     text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Navigation List */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative; 
+    margin-left: 20px;
+}
+
+/* Links Style */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
     display: block;
-    color: #44403c;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    transition: all 0.2s;
-    background-color: white;
-    border-left: 4px solid transparent;
-    border-bottom: 1px solid #f5f5f4;
+    transition: color 0.3s; /* Smooth color change */
 }
 
-.dropdown-item:last-child {
-    border-bottom: none;
+.nav-links a:hover {
+    color: #f4a261; /* Orange/Gold accent on hover */
 }
 
-.dropdown-item:hover {
-    background-color: #fafaf9;
-    color: #8c6b46;
-    border-left-color: #8c6b46;
-    padding-left: 28px;
+/* --- SMOOTH DROPDOWN LOGIC --- */
+
+/* The box that holds the links */
+.dropdown-content {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #444;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    
+    /* ANIMATION SETTINGS START */
+    opacity: 0;               /* Completely invisible */
+    visibility: hidden;       /* hidden from mouse clicks */
+    transform: translateY(10px); /* Start 10px lower */
+    transition: all 0.3s ease;   /* The smooth transition time */
+    /* ANIMATION SETTINGS END */
 }
 
-/* Ensuring top padding for fixed header */
-main {
-    padding-top: 6rem; 
-}
-@media (min-width: 1024px) {
-    main {
-        padding-top: 7rem;
-    }
+/* The links inside the dropdown */
+.dropdown-content a {
+    padding: 12px 16px;
+    border-bottom: 1px solid #555;
+    color: white;
+    display: block;
 }
 
-/* Ensure absolute images stay back */
-img.absolute {
-    z-index: 0;
-}
-div.relative.z-10 {
-    z-index: 10;
+.dropdown-content a:hover {
+    background-color: #555;
 }
 
-/* Services Grid */
-.services-grid {
-    grid-auto-flow: row dense;
+/* THE MAGIC: Fade in and slide up when you hover */
+.dropdown:hover .dropdown-content {
+    opacity: 1;               /* Fully visible */
+    visibility: visible;      /* Clickable */
+    transform: translateY(0); /* Slide up to original position */
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Carousel Styles */
-.carousel-track {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE 10+ */
-    width: 100%;
-}
-.carousel-track::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
-}
-
-/* Text Readability Overlays */
-.text-shadow {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-/* Hero Box specific overrides for mobile/desktop stacking */
-.hero-box-container {
-    display: flex;
-    flex-direction: column;
-}
-@media (min-width: 1024px) {
-    .hero-box-container {
-        flex-direction: row;
-        align-items: stretch;
-    }
+.hero h1 {
+    font-size: 3rem;
+    color: #333;
 }
