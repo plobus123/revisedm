@@ -7,11 +7,12 @@
     <meta name="description" content="Premier Class B Licensed General Contractors in Denver & Englewood, CO. Specializing in luxury remodeling, insurance restoration, structural repairs, and commercial construction." />
     
     <script src="https://web3forms.com/client/script.js" async defer></script>
-
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
     <script>
       tailwind.config = {
         theme: {
@@ -25,18 +26,31 @@
     </script>
 </head>
 <body class="bg-stone-50 text-stone-900 antialiased selection:bg-bronze-500 selection:text-white">
-<li class="dropdown">
-    <a href="services.html" class="dropbtn">Services &#9662;</a>
-    <div class="dropdown-content">
-        <div class="inner-menu"> <a href="#">General Contracting</a>
-            <a href="#">Remodeling</a>
-            <a href="#">Restoration</a>
-            <a href="#">Project Management</a>
-        </div>
-    </div>
-</li>
 
-    <main class="pt-28 lg:pt-36">
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">MARTIN CONSTRUCTORS</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services &#9662;</a>
+                    <div class="dropdown-content">
+                        <div class="inner-menu">
+                            <a href="services.html#gc">General Contracting</a>
+                            <a href="services.html#remodel">Remodeling</a>
+                            <a href="services.html#restore">Restoration</a>
+                            <a href="services.html#pm">Project Management</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main> 
         <section class="relative w-full h-auto min-h-[85vh] flex items-center justify-center overflow-hidden mt-0 py-20 lg:py-16">
             <div class="absolute inset-0 z-0">
                 <img src="images/living-room.jpg" alt="Denver Skyline" class="w-full h-full object-cover opacity-100 animate-[fadeIn_2s_ease-out]">
@@ -415,25 +429,6 @@
         </section>
     </main>
 
-    <footer class="bg-stone-950 text-white py-16 border-t border-stone-900">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
-                <div class="text-center md:text-left">
-                    <span class="font-serif text-2xl font-bold tracking-tight">MARTIN</span>
-                    <p class="text-stone-500 text-sm max-w-xs mt-2">Class B Licensed Contractors specializing in high-end restoration and remodeling.</p>
-                </div>
-                <div class="flex gap-8 text-xs font-bold uppercase tracking-widest text-stone-400">
-                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
-                    <a href="portfolio.html" class="hover:text-white transition-colors">Projects</a>
-                    <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
-                </div>
-                <div class="text-center md:text-right">
-                    <p class="text-stone-500 text-xs mb-2">© 2024 Martin Construction.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 lg:p-12 hidden">
         <button id="close-lightbox" class="absolute top-6 right-6 text-stone-400 hover:text-white transition-colors p-2 z-10">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -441,8 +436,7 @@
         <img id="lightbox-img" src="" alt="Detail" class="max-w-full max-h-full object-contain shadow-2xl">
     </div>
 
-    <script src="script.js"></script>
-<footer class="site-footer">
+    <footer class="site-footer">
         <div class="footer-container">
             
             <div class="footer-col">
@@ -473,6 +467,6 @@
             <p>&copy; 2025 Martin Constructors. All Rights Reserved.</p>
         </div>
     </footer>
-    ```
+    <script src="script.js"></script>
 </body>
 </html>
