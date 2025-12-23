@@ -36,12 +36,11 @@ body, html {
 
 /* DROPDOWN LOGIC */
 .dropdown-content {
-    z-index: 2000; /* Increased to sit above everything */
-    display: none; /* Hidden by default via CSS */
+    z-index: 1000;
 }
 
-/* Helper to show dropdown */
-.dropdown-content.show {
+/* Fix for hoverable dropdown */
+.group:hover .group-hover\:flex {
     display: flex;
 }
 
@@ -122,4 +121,21 @@ div.relative.z-10 {
 }
 .carousel-track::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
+}
+
+/* Text Readability Overlays */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Hero Box specific overrides for mobile/desktop stacking */
+.hero-box-container {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1024px) {
+    .hero-box-container {
+        flex-direction: row;
+        align-items: stretch;
+    }
 }
