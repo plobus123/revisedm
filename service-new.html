@@ -72,4 +72,77 @@
             <button id="close-mobile-menu" class="absolute top-6 right-6 p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-stone-900"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             </button>
-            <nav class="flex flex-col items-center gap-8 text-center w-full px-6 py-
+            <nav class="flex flex-col items-center gap-8 text-center w-full px-6 py-20">
+                <a href="index.html" class="mobile-link font-serif text-4xl text-stone-900 hover:text-bronze-600 transition-colors">Home</a>
+                <a href="about.html" class="mobile-link font-serif text-4xl text-stone-900 hover:text-bronze-600 transition-colors">About Us</a>
+                <div class="w-full max-w-xs">
+                    <button class="mobile-dropdown-toggle w-full font-serif text-4xl text-stone-900 hover:text-bronze-600 transition-colors flex items-center justify-center gap-2 bg-transparent border-none cursor-pointer">
+                        Services <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="hidden flex flex-col gap-4 mt-6 bg-stone-100 p-6 rounded-lg">
+                        <a href="service-new.html" class="mobile-link text-base uppercase tracking-widest text-stone-600">New Construction</a>
+                        <a href="service-basement.html" class="mobile-link text-base uppercase tracking-widest text-stone-600">Basement</a>
+                        <a href="service-insurance.html" class="mobile-link text-base uppercase tracking-widest text-stone-600">Insurance</a>
+                        <a href="service-kitchen.html" class="mobile-link text-base uppercase tracking-widest text-stone-600">Kitchen</a>
+                        <a href="service-bath.html" class="mobile-link text-base uppercase tracking-widest text-stone-600">Bathroom</a>
+                        <a href="service-structural.html" class="mobile-link text-base uppercase tracking-widest text-stone-600">Structural</a>
+                        <a href="service-commercial.html" class="mobile-link text-base uppercase tracking-widest text-stone-600">Commercial</a>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="mobile-link font-serif text-4xl text-stone-900 hover:text-bronze-600 transition-colors">Portfolio</a>
+                <a href="blog.html" class="mobile-link font-serif text-4xl text-stone-900 hover:text-bronze-600 transition-colors">Blog</a>
+                <a href="contact.html" class="mobile-link mt-6 px-10 py-5 bg-stone-900 text-white text-base uppercase tracking-widest hover:bg-bronze-600 transition-colors">Book Appointment</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-28 lg:pt-36">
+        <section class="relative h-[60vh] min-h-[500px] mb-20 mt-0">
+            <img src="https://images.unsplash.com/photo-1600596542815-3ad19fb2a258?auto=format&fit=crop&w=2070&q=80" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60 flex items-center justify-center relative z-10">
+                <div class="text-center text-white p-6">
+                    <span class="text-bronze-500 text-sm font-bold uppercase tracking-widest mb-4 block">Services</span>
+                    <h1 class="font-serif text-5xl md:text-7xl">New Construction</h1>
+                </div>
+            </div>
+        </section>
+        <div class="container mx-auto px-6 lg:px-12 pb-20">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="font-serif text-4xl mb-6">Building Your Legacy</h2>
+                    <p class="text-stone-600 mb-6 leading-relaxed text-lg">
+                        From custom homes to detached garages and additions, we bring your blueprints to life. Our "Class B" license allows us to handle complex ground-up construction projects across Denver and Englewood.
+                    </p>
+                    <p class="text-stone-600 mb-6 leading-relaxed text-lg">
+                        We ensure that from the first shovel in the ground to the final coat of paint, every detail is executed to the highest standard.
+                    </p>
+                    <a href="contact.html" class="inline-block bg-stone-900 text-white px-8 py-4 uppercase tracking-widest text-xs font-bold hover:bg-bronze-600 transition-colors cursor-pointer">Start Building</a>
+                </div>
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" class="w-full h-auto shadow-lg">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-stone-950 text-white py-16 border-t border-stone-900">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
+                <div class="text-center md:text-left">
+                    <span class="font-serif text-2xl font-bold tracking-tight">MARTIN</span>
+                    <p class="text-stone-500 text-sm max-w-xs mt-2">Class B Licensed Contractors specializing in high-end restoration and remodeling.</p>
+                </div>
+                <div class="flex gap-8 text-xs font-bold uppercase tracking-widest text-stone-400">
+                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                    <a href="portfolio.html" class="hover:text-white transition-colors">Projects</a>
+                    <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-stone-500 text-xs mb-2">© 2024 Martin Construction.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
