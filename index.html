@@ -158,11 +158,17 @@
                         <div class="flex-1 bg-stone-900 text-white p-8 shadow-2xl">
                             <h3 class="font-serif text-3xl mb-3 text-white">Schedule your <br/><span class="text-bronze-500">FREE Design Consultation</span></h3>
                             <p class="text-stone-400 text-sm mb-6">Enter your email to get started with your complimentary design consultation.</p>
-                            <form class="hero-form space-y-4">
+                            
+                            <form action="https://api.web3forms.com/submit" method="POST" class="hero-form space-y-4">
+                                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                                <input type="hidden" name="subject" value="New 10% Offer Inquiry (Hero Form)">
+                                <input type="hidden" name="redirect" value="https://martinconstructors.org/contact.html">
+
                                 <div>
-                                    <input type="email" placeholder="Email Address" required class="w-full bg-white text-stone-900 p-4 text-base focus:outline-none border-2 border-transparent focus:border-bronze-500 placeholder-stone-400">
+                                    <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white text-stone-900 p-4 text-base focus:outline-none border-2 border-transparent focus:border-bronze-500 placeholder-stone-400">
                                 </div>
-                                <button type="submit" class="w-full bg-bronze-600 text-white py-4 px-6 uppercase tracking-widest text-sm font-bold hover:bg-white hover:text-stone-900 transition-colors cursor-pointer border border-bronze-600">Claim 10% Offer</button>
+                                <button type="submit" class="w-full bg-bronze-600 text-white py-4 px-6 uppercase tracking-widest text-sm font-bold hover:bg-white hover:text-stone-900 transition-colors cursor-pointer border border-bronze-600">Claim 10% Offer*</button>
+                                <p class="text-xs text-stone-500 mt-3 text-center leading-snug">For a limited time, new clients can receive a 10% discount on any project over $10,000, please inquire for more details. Terms & Conditions apply</p>
                             </form>
                         </div>
                     </div>
@@ -312,6 +318,57 @@
                     </div>
                 </div>
 
+                <div class="mb-20 text-center">
+                    <div class="text-center mb-16">
+                         <span class="text-sm font-bold uppercase tracking-widest text-bronze-600">Testimonials</span>
+                         <h2 class="font-serif text-4xl md:text-5xl mt-4">What Our Clients Say</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                        <a href="https://share.google/0FvcKOd7VBUmzOLtQ" target="_blank" class="block bg-white p-10 border border-stone-200 shadow-sm relative hover:shadow-lg transition-shadow">
+                            <div class="text-yellow-500 mb-6 flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            </div>
+                            <p class="text-stone-600 mb-8 italic text-lg leading-relaxed">"Martin Construction transformed our dated kitchen into a masterpiece. The attention to detail and communication throughout the process was incredible."</p>
+                            <div>
+                                <p class="font-serif font-bold text-stone-900 text-xl">Sarah Jenkins</p>
+                                <p class="text-sm text-stone-400 uppercase tracking-widest">Englewood, CO</p>
+                            </div>
+                        </a>
+                        <a href="https://share.google/0FvcKOd7VBUmzOLtQ" target="_blank" class="block bg-white p-10 border border-stone-200 shadow-sm relative hover:shadow-lg transition-shadow">
+                            <div class="text-yellow-500 mb-6 flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            </div>
+                            <p class="text-stone-600 mb-8 italic text-lg leading-relaxed">"Dealing with insurance was a nightmare until Martin Construction took over. They handled everything and got us a better payout for our restoration."</p>
+                            <div>
+                                <p class="font-serif font-bold text-stone-900 text-xl">Michael Ross</p>
+                                <p class="text-sm text-stone-400 uppercase tracking-widest">Denver, CO</p>
+                            </div>
+                        </a>
+                        <a href="https://share.google/0FvcKOd7VBUmzOLtQ" target="_blank" class="block bg-white p-10 border border-stone-200 shadow-sm relative hover:shadow-lg transition-shadow">
+                            <div class="text-yellow-500 mb-6 flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            </div>
+                            <p class="text-stone-600 mb-8 italic text-lg leading-relaxed">"We hired them for a commercial build-out. Professional, on time, and within budget. Their in-house team made all the difference."</p>
+                            <div>
+                                <p class="font-serif font-bold text-stone-900 text-xl">David Chen</p>
+                                <p class="text-sm text-stone-400 uppercase tracking-widest">TechStart Solutions</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -382,20 +439,23 @@
                             </div>
                     </div>
                     <div class="bg-white p-10 shadow-xl border border-stone-200">
-                        <form class="space-y-6 contact-form">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 contact-form">
+                            <input type="hidden" name="access_key" value="3e696060-6ade-46dd-93a1-590db5823748">
+                            <input type="hidden" name="subject" value="New Contact Form Inquiry">
+
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
                                     <label class="text-sm font-bold uppercase tracking-widest text-stone-500">Name</label>
-                                    <input type="text" required class="w-full border-2 border-stone-900 bg-white text-stone-900 p-4 text-base focus:outline-none focus:border-bronze-600">
+                                    <input type="text" name="name" required class="w-full border-2 border-stone-900 bg-white text-stone-900 p-4 text-base focus:outline-none focus:border-bronze-600">
                                 </div>
                                 <div class="space-y-2">
                                     <label class="text-sm font-bold uppercase tracking-widest text-stone-500">Phone</label>
-                                    <input type="tel" required class="w-full border-2 border-stone-900 bg-white text-stone-900 p-4 text-base focus:outline-none focus:border-bronze-600">
+                                    <input type="tel" name="phone" required class="w-full border-2 border-stone-900 bg-white text-stone-900 p-4 text-base focus:outline-none focus:border-bronze-600">
                                 </div>
                             </div>
                             <div class="space-y-2">
                                 <label class="text-sm font-bold uppercase tracking-widest text-stone-500">Service</label>
-                                <select class="w-full border-2 border-stone-900 bg-white text-stone-900 p-4 text-base focus:outline-none focus:border-bronze-600">
+                                <select name="service" class="w-full border-2 border-stone-900 bg-white text-stone-900 p-4 text-base focus:outline-none focus:border-bronze-600">
                                     <option>Insurance Restoration</option>
                                     <option>Kitchen Remodel</option>
                                     <option>Bath Remodel</option>
@@ -408,7 +468,7 @@
                             </div>
                             <div class="space-y-2">
                                 <label class="text-sm font-bold uppercase tracking-widest text-stone-500">Message</label>
-                                <textarea rows="4" class="w-full border-2 border-stone-900 bg-white text-stone-900 p-4 text-base focus:outline-none focus:border-bronze-600"></textarea>
+                                <textarea name="message" rows="4" class="w-full border-2 border-stone-900 bg-white text-stone-900 p-4 text-base focus:outline-none focus:border-bronze-600"></textarea>
                             </div>
                             <button type="submit" class="w-full bg-stone-900 text-white py-5 uppercase tracking-widest text-sm font-bold hover:bg-bronze-600 transition-colors cursor-pointer">Submit Inquiry</button>
                         </form>
